@@ -1,4 +1,4 @@
-# ClientPath Lead Conversion System — Implementation Plan
+# ClientPath Lead Conversion System â€” Implementation Plan
 
 ## Project Overview
 
@@ -93,21 +93,21 @@ Do not build these in the first pass unless all MVP phases are complete:
 
 ```text
 Visitor lands on page
-↓
+â†“
 Visitor reads offer and submits enquiry form
-↓
+â†“
 Lead is saved into Supabase
-↓
+â†“
 Business owner receives/stores the lead
-↓
+â†“
 Business owner logs into dashboard
-↓
+â†“
 Business owner views lead details
-↓
+â†“
 Business owner updates lead status
-↓
+â†“
 Business owner uses follow-up helper
-↓
+â†“
 Lead becomes booked / won / lost
 ```
 
@@ -116,7 +116,7 @@ Lead becomes booked / won / lost
 ## Suggested Lead Status Pipeline
 
 ```text
-New → Contacted → Follow-up → Consultation Booked → Won → Lost
+New â†’ Contacted â†’ Follow-up â†’ Consultation Booked â†’ Won â†’ Lost
 ```
 
 ---
@@ -127,36 +127,36 @@ Adjust based on the actual framework version, but keep the project organized.
 
 ```text
 clientpath-crm-lite/
-├── app/
-│   ├── page.tsx
-│   ├── login/
-│   ├── dashboard/
-│   ├── leads/
-│   │   ├── page.tsx
-│   │   └── [id]/
-│   └── analytics/
-├── components/
-│   ├── LeadForm.tsx
-│   ├── LeadCard.tsx
-│   ├── LeadStatusBadge.tsx
-│   ├── DashboardStats.tsx
-│   ├── FollowUpMessageBox.tsx
-│   └── Navbar.tsx
-├── lib/
-│   ├── supabaseClient.ts
-│   ├── leadUtils.ts
-│   └── followUpTemplates.ts
-├── types/
-│   └── lead.ts
-├── supabase/
-│   └── schema.sql
-├── docs/
-│   ├── setup.md
-│   ├── deployment.md
-│   └── handoff.md
-├── .env.example
-├── README.md
-└── package.json
+â”œâ”€â”€ app/
+â”‚   â”œâ”€â”€ page.tsx
+â”‚   â”œâ”€â”€ login/
+â”‚   â”œâ”€â”€ dashboard/
+â”‚   â”œâ”€â”€ leads/
+â”‚   â”‚   â”œâ”€â”€ page.tsx
+â”‚   â”‚   â””â”€â”€ [id]/
+â”‚   â””â”€â”€ analytics/
+â”œâ”€â”€ components/
+â”‚   â”œâ”€â”€ LeadForm.tsx
+â”‚   â”œâ”€â”€ LeadCard.tsx
+â”‚   â”œâ”€â”€ LeadStatusBadge.tsx
+â”‚   â”œâ”€â”€ DashboardStats.tsx
+â”‚   â”œâ”€â”€ FollowUpMessageBox.tsx
+â”‚   â””â”€â”€ Navbar.tsx
+â”œâ”€â”€ lib/
+â”‚   â”œâ”€â”€ supabaseClient.ts
+â”‚   â”œâ”€â”€ leadUtils.ts
+â”‚   â””â”€â”€ followUpTemplates.ts
+â”œâ”€â”€ types/
+â”‚   â””â”€â”€ lead.ts
+â”œâ”€â”€ supabase/
+â”‚   â””â”€â”€ schema.sql
+â”œâ”€â”€ docs/
+â”‚   â”œâ”€â”€ setup.md
+â”‚   â”œâ”€â”€ deployment.md
+â”‚   â””â”€â”€ handoff.md
+â”œâ”€â”€ .env.example
+â”œâ”€â”€ README.md
+â””â”€â”€ package.json
 ```
 
 ---
@@ -210,7 +210,7 @@ create table business_settings (
 
 ---
 
-# Phase 0 — Project Setup and Baseline
+# Phase 0 â€” Project Setup and Baseline
 
 ## Goal
 
@@ -219,37 +219,37 @@ Create the initial project structure and make sure the app can run locally.
 ## Build Checklist
 
 - [ ] Create a new GitHub repository named `clientpath-crm-lite`.
-- [ ] Initialize a Next.js project.
-- [ ] Install and configure Tailwind CSS.
-- [ ] Create a clean homepage placeholder.
-- [ ] Create basic folder structure: `components`, `lib`, `types`, `docs`, `supabase`.
-- [ ] Add `.env.example` file.
-- [ ] Add initial `README.md`.
-- [ ] Add basic project description to README.
-- [ ] Confirm app runs locally with `npm run dev`.
-- [ ] Commit initial project setup.
+- [x] Initialize a Next.js project.
+- [x] Install and configure Tailwind CSS.
+- [x] Create a clean homepage placeholder.
+- [x] Create basic folder structure: `components`, `lib`, `types`, `docs`, `supabase`.
+- [x] Add `.env.example` file.
+- [x] Add initial `README.md`.
+- [x] Add basic project description to README.
+- [x] Confirm app runs locally with `npm run dev`.
+- [x] Commit initial project setup.
 
 ## Testing Checklist
 
-- [ ] Run `npm install` successfully.
-- [ ] Run `npm run dev` successfully.
+- [x] Run `npm install` successfully.
+- [x] Run `npm run dev` successfully.
 - [ ] Open local development URL in browser.
-- [ ] Confirm homepage loads without error.
-- [ ] Confirm no TypeScript errors.
-- [ ] Confirm no obvious console errors.
-- [ ] Confirm Git repo is initialized and first commit is created.
+- [x] Confirm homepage loads without error.
+- [x] Confirm no TypeScript errors.
+- [x] Confirm no obvious console errors.
+- [x] Confirm Git repo is initialized and first commit is created.
 
 ## Phase Completion Criteria
 
-- [ ] App runs locally.
-- [ ] Project structure is clean.
-- [ ] README exists.
-- [ ] `.env.example` exists.
-- [ ] Code is committed.
+- [x] App runs locally.
+- [x] Project structure is clean.
+- [x] README exists.
+- [x] `.env.example` exists.
+- [x] Code is committed.
 
 ---
 
-# Phase 1 — Product Skeleton and Landing Page
+# Phase 1 â€” Product Skeleton and Landing Page
 
 ## Goal
 
@@ -299,7 +299,7 @@ Build the first public-facing landing page for a demo service business, starting
 
 ---
 
-# Phase 2 — Supabase Setup and Database Schema
+# Phase 2 â€” Supabase Setup and Database Schema
 
 ## Goal
 
@@ -350,7 +350,7 @@ Use the service role key only on the server side if needed. Never expose it publ
 
 ---
 
-# Phase 3 — Lead Capture Form
+# Phase 3 â€” Lead Capture Form
 
 ## Goal
 
@@ -400,7 +400,7 @@ Do not make too many fields required. The form should be easy to submit.
 
 ---
 
-# Phase 4 — Admin Authentication
+# Phase 4 â€” Admin Authentication
 
 ## Goal
 
@@ -439,7 +439,7 @@ Add a simple protected admin area so the business owner can log in and view lead
 
 ---
 
-# Phase 5 — Leads Dashboard
+# Phase 5 â€” Leads Dashboard
 
 ## Goal
 
@@ -488,7 +488,7 @@ Build the main dashboard where the business owner can view submitted leads.
 
 ---
 
-# Phase 6 — Lead Detail Page, Status Updates, and Notes
+# Phase 6 â€” Lead Detail Page, Status Updates, and Notes
 
 ## Goal
 
@@ -529,7 +529,7 @@ Allow the business owner to inspect one lead, update its status, and add notes.
 
 ---
 
-# Phase 7 — Follow-Up Message Helper
+# Phase 7 â€” Follow-Up Message Helper
 
 ## Goal
 
@@ -574,7 +574,7 @@ Hi {name}, thanks for reaching out. Saw that you're interested in {service_inter
 
 ---
 
-# Phase 8 — Basic Analytics
+# Phase 8 â€” Basic Analytics
 
 ## Goal
 
@@ -627,7 +627,7 @@ Top lead source
 
 ---
 
-# Phase 9 — Notification Basics
+# Phase 9 â€” Notification Basics
 
 ## Goal
 
@@ -674,7 +674,7 @@ For first completion, option 1 is acceptable. For sellable version, option 2 or 
 
 ---
 
-# Phase 10 — Business Settings and Reusability
+# Phase 10 â€” Business Settings and Reusability
 
 ## Goal
 
@@ -711,7 +711,7 @@ Make the system easier to adapt for different clients or niches.
 
 ---
 
-# Phase 11 — Embed Form Version
+# Phase 11 â€” Embed Form Version
 
 ## Goal
 
@@ -760,7 +760,7 @@ This phase is optional for the first portfolio MVP, but valuable for future mone
 
 ---
 
-# Phase 12 — UI Polish and Portfolio Readiness
+# Phase 12 â€” UI Polish and Portfolio Readiness
 
 ## Goal
 
@@ -801,7 +801,7 @@ Make the project good enough to show on a resume, GitHub, and ClientPath Studio 
 
 ---
 
-# Phase 13 — Deployment
+# Phase 13 â€” Deployment
 
 ## Goal
 
@@ -842,7 +842,7 @@ Deploy the system publicly so it can be shown as a live demo.
 
 ---
 
-# Phase 14 — Documentation and AI Agent Handoff
+# Phase 14 â€” Documentation and AI Agent Handoff
 
 ## Goal
 
@@ -894,7 +894,7 @@ Make the project easy for another AI agent or developer to continue.
 
 ---
 
-# Phase 15 — Optional AI Follow-Up Generator
+# Phase 15 â€” Optional AI Follow-Up Generator
 
 ## Goal
 
@@ -946,7 +946,7 @@ The AI should generate a short WhatsApp or email reply that:
 
 ---
 
-# Phase 16 — Optional n8n Automation
+# Phase 16 â€” Optional n8n Automation
 
 ## Goal
 
@@ -1097,5 +1097,5 @@ Do not add AI, automation, payments, or complex SaaS features yet.
 First target:
 
 ```text
-Landing page → lead form → Supabase database → protected dashboard → lead status tracking
+Landing page â†’ lead form â†’ Supabase database â†’ protected dashboard â†’ lead status tracking
 ```
