@@ -1,0 +1,2 @@
+-- Phase 0 placeholder schema file
+-- The real tables will be added in the Supabase phase.
