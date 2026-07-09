@@ -1,4 +1,4 @@
-# ClientPath Lead Conversion System â€” Implementation Plan
+# ClientPath Lead Conversion System Ã¢â‚¬â€ Implementation Plan
 
 ## Project Overview
 
@@ -93,21 +93,21 @@ Do not build these in the first pass unless all MVP phases are complete:
 
 ```text
 Visitor lands on page
-â†“
+Ã¢â€ â€œ
 Visitor reads offer and submits enquiry form
-â†“
+Ã¢â€ â€œ
 Lead is saved into Supabase
-â†“
+Ã¢â€ â€œ
 Business owner receives/stores the lead
-â†“
+Ã¢â€ â€œ
 Business owner logs into dashboard
-â†“
+Ã¢â€ â€œ
 Business owner views lead details
-â†“
+Ã¢â€ â€œ
 Business owner updates lead status
-â†“
+Ã¢â€ â€œ
 Business owner uses follow-up helper
-â†“
+Ã¢â€ â€œ
 Lead becomes booked / won / lost
 ```
 
@@ -116,7 +116,7 @@ Lead becomes booked / won / lost
 ## Suggested Lead Status Pipeline
 
 ```text
-New â†’ Contacted â†’ Follow-up â†’ Consultation Booked â†’ Won â†’ Lost
+New Ã¢â€ â€™ Contacted Ã¢â€ â€™ Follow-up Ã¢â€ â€™ Consultation Booked Ã¢â€ â€™ Won Ã¢â€ â€™ Lost
 ```
 
 ---
@@ -127,36 +127,36 @@ Adjust based on the actual framework version, but keep the project organized.
 
 ```text
 clientpath-crm-lite/
-â”œâ”€â”€ app/
-â”‚   â”œâ”€â”€ page.tsx
-â”‚   â”œâ”€â”€ login/
-â”‚   â”œâ”€â”€ dashboard/
-â”‚   â”œâ”€â”€ leads/
-â”‚   â”‚   â”œâ”€â”€ page.tsx
-â”‚   â”‚   â””â”€â”€ [id]/
-â”‚   â””â”€â”€ analytics/
-â”œâ”€â”€ components/
-â”‚   â”œâ”€â”€ LeadForm.tsx
-â”‚   â”œâ”€â”€ LeadCard.tsx
-â”‚   â”œâ”€â”€ LeadStatusBadge.tsx
-â”‚   â”œâ”€â”€ DashboardStats.tsx
-â”‚   â”œâ”€â”€ FollowUpMessageBox.tsx
-â”‚   â””â”€â”€ Navbar.tsx
-â”œâ”€â”€ lib/
-â”‚   â”œâ”€â”€ supabaseClient.ts
-â”‚   â”œâ”€â”€ leadUtils.ts
-â”‚   â””â”€â”€ followUpTemplates.ts
-â”œâ”€â”€ types/
-â”‚   â””â”€â”€ lead.ts
-â”œâ”€â”€ supabase/
-â”‚   â””â”€â”€ schema.sql
-â”œâ”€â”€ docs/
-â”‚   â”œâ”€â”€ setup.md
-â”‚   â”œâ”€â”€ deployment.md
-â”‚   â””â”€â”€ handoff.md
-â”œâ”€â”€ .env.example
-â”œâ”€â”€ README.md
-â””â”€â”€ package.json
+Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ app/
+Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ page.tsx
+Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ login/
+Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ dashboard/
+Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ leads/
+Ã¢â€â€š   Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ page.tsx
+Ã¢â€â€š   Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ [id]/
+Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ analytics/
+Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ components/
+Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ LeadForm.tsx
+Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ LeadCard.tsx
+Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ LeadStatusBadge.tsx
+Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ DashboardStats.tsx
+Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ FollowUpMessageBox.tsx
+Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ Navbar.tsx
+Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ lib/
+Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ supabaseClient.ts
+Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ leadUtils.ts
+Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ followUpTemplates.ts
+Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ types/
+Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ lead.ts
+Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ supabase/
+Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ schema.sql
+Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ docs/
+Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ setup.md
+Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ deployment.md
+Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ handoff.md
+Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ .env.example
+Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ README.md
+Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ package.json
 ```
 
 ---
@@ -210,7 +210,7 @@ create table business_settings (
 
 ---
 
-# Phase 0 â€” Project Setup and Baseline
+# Phase 0 Ã¢â‚¬â€ Project Setup and Baseline
 
 ## Goal
 
@@ -249,7 +249,7 @@ Create the initial project structure and make sure the app can run locally.
 
 ---
 
-# Phase 1 â€” Product Skeleton and Landing Page
+# Phase 1 — Product Skeleton and Landing Page
 
 ## Goal
 
@@ -257,49 +257,49 @@ Build the first public-facing landing page for a demo service business, starting
 
 ## Build Checklist
 
-- [ ] Create a polished landing page layout.
-- [ ] Add hero section with clear offer promise.
-- [ ] Add problem/pain point section.
-- [ ] Add service benefits section.
-- [ ] Add simple process section.
-- [ ] Add testimonials placeholder section.
-- [ ] Add lead form section placeholder.
-- [ ] Add final CTA section.
-- [ ] Make page mobile-responsive.
-- [ ] Use realistic personal trainer demo copy.
-- [ ] Keep branding flexible so it can be reused for other businesses later.
+- [x] Create a polished landing page layout.
+- [x] Add hero section with clear offer promise.
+- [x] Add problem/pain point section.
+- [x] Add service benefits section.
+- [x] Add simple process section.
+- [x] Add testimonials placeholder section.
+- [x] Add lead form section placeholder.
+- [x] Add final CTA section.
+- [x] Make page mobile-responsive.
+- [x] Use realistic personal trainer demo copy.
+- [x] Keep branding flexible so it can be reused for other businesses later.
 
 ## Suggested Landing Page Sections
 
-- [ ] Hero: headline, subheadline, CTA.
-- [ ] Pain points: what the visitor is struggling with.
-- [ ] Offer: what the trainer/service provider helps with.
-- [ ] Benefits: outcomes the visitor wants.
-- [ ] How it works: 3-step process.
-- [ ] Social proof: placeholder testimonials.
-- [ ] Lead form CTA: apply / enquire / book consultation.
-- [ ] Footer: simple business details.
+- [x] Hero: headline, subheadline, CTA.
+- [x] Pain points: what the visitor is struggling with.
+- [x] Offer: what the trainer/service provider helps with.
+- [x] Benefits: outcomes the visitor wants.
+- [x] How it works: 3-step process.
+- [x] Social proof: placeholder testimonials.
+- [x] Lead form CTA: apply / enquire / book consultation.
+- [x] Footer: simple business details.
 
 ## Testing Checklist
 
-- [ ] Check page on desktop viewport.
-- [ ] Check page on mobile viewport.
-- [ ] Check CTA buttons scroll to the form section or correct destination.
-- [ ] Confirm layout does not break at common widths: 375px, 768px, 1024px, 1440px.
-- [ ] Confirm text is readable and spacing is clean.
-- [ ] Confirm no broken internal links.
-- [ ] Run lint/type check if available.
+- [x] Check page on desktop viewport.
+- [x] Check page on mobile viewport.
+- [x] Check CTA buttons scroll to the form section or correct destination.
+- [x] Confirm layout does not break at common widths: 375px, 768px, 1024px, 1440px.
+- [x] Confirm text is readable and spacing is clean.
+- [x] Confirm no broken internal links.
+- [x] Run lint/type check if available.
 
 ## Phase Completion Criteria
 
-- [ ] Landing page looks professional enough for portfolio use.
-- [ ] Page is mobile-friendly.
-- [ ] CTA flow is clear.
-- [ ] Code is committed.
+- [x] Landing page looks professional enough for portfolio use.
+- [x] Page is mobile-friendly.
+- [x] CTA flow is clear.
+- [x] Code is committed.
 
 ---
 
-# Phase 2 â€” Supabase Setup and Database Schema
+# Phase 2 Ã¢â‚¬â€ Supabase Setup and Database Schema
 
 ## Goal
 
@@ -350,7 +350,7 @@ Use the service role key only on the server side if needed. Never expose it publ
 
 ---
 
-# Phase 3 â€” Lead Capture Form
+# Phase 3 Ã¢â‚¬â€ Lead Capture Form
 
 ## Goal
 
@@ -400,7 +400,7 @@ Do not make too many fields required. The form should be easy to submit.
 
 ---
 
-# Phase 4 â€” Admin Authentication
+# Phase 4 Ã¢â‚¬â€ Admin Authentication
 
 ## Goal
 
@@ -439,7 +439,7 @@ Add a simple protected admin area so the business owner can log in and view lead
 
 ---
 
-# Phase 5 â€” Leads Dashboard
+# Phase 5 Ã¢â‚¬â€ Leads Dashboard
 
 ## Goal
 
@@ -488,7 +488,7 @@ Build the main dashboard where the business owner can view submitted leads.
 
 ---
 
-# Phase 6 â€” Lead Detail Page, Status Updates, and Notes
+# Phase 6 Ã¢â‚¬â€ Lead Detail Page, Status Updates, and Notes
 
 ## Goal
 
@@ -529,7 +529,7 @@ Allow the business owner to inspect one lead, update its status, and add notes.
 
 ---
 
-# Phase 7 â€” Follow-Up Message Helper
+# Phase 7 Ã¢â‚¬â€ Follow-Up Message Helper
 
 ## Goal
 
@@ -574,7 +574,7 @@ Hi {name}, thanks for reaching out. Saw that you're interested in {service_inter
 
 ---
 
-# Phase 8 â€” Basic Analytics
+# Phase 8 Ã¢â‚¬â€ Basic Analytics
 
 ## Goal
 
@@ -627,7 +627,7 @@ Top lead source
 
 ---
 
-# Phase 9 â€” Notification Basics
+# Phase 9 Ã¢â‚¬â€ Notification Basics
 
 ## Goal
 
@@ -674,7 +674,7 @@ For first completion, option 1 is acceptable. For sellable version, option 2 or 
 
 ---
 
-# Phase 10 â€” Business Settings and Reusability
+# Phase 10 Ã¢â‚¬â€ Business Settings and Reusability
 
 ## Goal
 
@@ -711,7 +711,7 @@ Make the system easier to adapt for different clients or niches.
 
 ---
 
-# Phase 11 â€” Embed Form Version
+# Phase 11 Ã¢â‚¬â€ Embed Form Version
 
 ## Goal
 
@@ -760,7 +760,7 @@ This phase is optional for the first portfolio MVP, but valuable for future mone
 
 ---
 
-# Phase 12 â€” UI Polish and Portfolio Readiness
+# Phase 12 Ã¢â‚¬â€ UI Polish and Portfolio Readiness
 
 ## Goal
 
@@ -801,7 +801,7 @@ Make the project good enough to show on a resume, GitHub, and ClientPath Studio 
 
 ---
 
-# Phase 13 â€” Deployment
+# Phase 13 Ã¢â‚¬â€ Deployment
 
 ## Goal
 
@@ -842,7 +842,7 @@ Deploy the system publicly so it can be shown as a live demo.
 
 ---
 
-# Phase 14 â€” Documentation and AI Agent Handoff
+# Phase 14 Ã¢â‚¬â€ Documentation and AI Agent Handoff
 
 ## Goal
 
@@ -894,7 +894,7 @@ Make the project easy for another AI agent or developer to continue.
 
 ---
 
-# Phase 15 â€” Optional AI Follow-Up Generator
+# Phase 15 Ã¢â‚¬â€ Optional AI Follow-Up Generator
 
 ## Goal
 
@@ -946,7 +946,7 @@ The AI should generate a short WhatsApp or email reply that:
 
 ---
 
-# Phase 16 â€” Optional n8n Automation
+# Phase 16 Ã¢â‚¬â€ Optional n8n Automation
 
 ## Goal
 
@@ -1097,5 +1097,5 @@ Do not add AI, automation, payments, or complex SaaS features yet.
 First target:
 
 ```text
-Landing page â†’ lead form â†’ Supabase database â†’ protected dashboard â†’ lead status tracking
+Landing page Ã¢â€ â€™ lead form Ã¢â€ â€™ Supabase database Ã¢â€ â€™ protected dashboard Ã¢â€ â€™ lead status tracking
 ```
